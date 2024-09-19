@@ -1,6 +1,10 @@
 /* General Styles for Desktop */
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Foldit:wght@100..900&family=Kalnia+Glaze:wght@100..700&family=VT323&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -23,6 +27,16 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     animation: fadeInUp 1s ease-out;
     font-size: 25px;
+}
+
+.container a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.container a:hover {
+    color: rgb(239, 131, 131);
+    text-decoration: none;
 }
 
 .search-container {
@@ -71,18 +85,6 @@ body {
     border-radius: 10px;
 }
 
-button {
-    padding: 10px;
-    border: none;
-    background-color: #e0a8d5;
-    color: white;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
 
 .sr-only {
     font-size: 30px;
@@ -92,7 +94,7 @@ button:hover {
 @media only screen and (max-width: 768px) {
     .container {
         width: 90%;
-        margin: 20px;
+        margin: 4px;
         padding: 20px;
     }
 
@@ -150,24 +152,38 @@ button:hover {
     }
 }
 
-.section{
+.section {
     font-size: 25px;
 }
 
 .highlight {
-    background-color: yellow;  /* Highlight color */
-    font-weight: bold;  /* Optionally make it bold */
+    background-color: yellow;
+    /* Highlight color */
+    font-weight: bold;
+    /* Optionally make it bold */
 }
 
 @media only screen and (max-width: 480px) and (min-width: 320px) and (orientation: portrait) {
-    .container{
-        margin-top: 69px;
+    .container {
+        margin-top: 25px;
     }
-    .search-container{
+
+    .search-container {
         display: flex;
         position: fixed;
         top: 0;
-        /* right: 113px; */
-        left: 10px;
     }
-  }
+
+    .sidemenu {
+        margin-top: 46px;
+        position: relative;
+        width: 200px;
+    }
+
+    .body-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

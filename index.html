@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Analysis</title>
+
+    <!-- Styles  -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sidemenu.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.0/dist/katex.min.css">
+
+    <!-- Scripts -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.0/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.0/dist/contrib/auto-render.min.js"></script>
     <script>
@@ -23,6 +28,8 @@
             });
         });
     </script>
+    <script src="script.js"></script>
+    <!-- <script src="sidemenu.js"></script> -->
 </head>
 
 <body>
@@ -33,82 +40,129 @@
     </div>
     </div>
 
+    <div class="body-container">
+        <div class="sidemenu">
+            <div id="topic-button">Topics</div>
+            <div class="topic-content">
+                <ul class="side-section">
+                    <div class="list">
 
-    <div class="container">
-        <div id="introduction-to-limits">
-            <h2>Introduction to Limits</h2>
-            <div id="sequences">
-                <h3>Sequences:</h3>
+                        <a href="#introduction-to-limits">Introduction To Limits</a>
+                        <span class="span" id="sequence"><img src="dropdown.svg" alt="" srcset=""></span>
+                    </div>
+                    <ol class="side-subsection" type="1">
+                        <li id="seq-list">
+                            <div class="list">
+                                <a href="#sequences">Sequences</a>
+                                <span class="span" id="sequence"><img src="dropdown.svg" alt="" srcset=""></span>
+                            </div>
+                            <ul class="side-subsubsection">
+                                <li><a href="#infinitely-large-sequences">Infinitely Large Sequence</a></li>
+                                <li><a href="#infinitely-small-sequences">Infinitely Small Sequences</a></li>
+                                <li><a href="#cauchy-sequences">Cauchy Sequence</a></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </ul>
+            </div>
+        </div>
 
-                <div id="infinitely-large-sequences">
-                    <b>Infinitely Large Sequence:</b>
+        <div class="container">
+            <div id="introduction-to-limits">
+                <h2>Introduction to Limits</h2>
+                <div id="sequences">
+                    <h3>Sequences:</h3>
 
-                    <p>
-                        A sequence $\{a_n\}$ is called infinitely large if $ \forall K \in \mathbb{R}$ $\exists n_{k}
-                        \in
-                        \mathbb{N}$ such that $|a_n|>K$ $\forall n\geq n_k$.
-                    </p>
+                    <div id="infinitely-large-sequences">
+                        <b>&bullet; Infinitely Large Sequence:</b>
 
-                    <p>
-                        <b>Understanding What this means:</b>
-                        This means you have a sequence and you are going for larger and larger terms for example you
-                        have a
-                        sequence $\{a_n\}$ now, let's say you choose $2024 \in \mathbb{R}$ then as the sequence is
-                        getting
-                        larger and larger after a certain time you must find a term $a_N$ such that $a_N>2024.$ <br>
-                        Now, it may be two sided or one sided infinity as we go along the sequence and that is to say
-                        the
-                        sequence can either go to $\infty$ or $-\infty$ or both simultaneosly. <br>
-                    </p>
+                        <p>
+                            A sequence $\{a_n\}$ is called infinitely large if $ \forall K \in \mathbb{R}$ $\exists
+                            n_{k}
+                            \in
+                            \mathbb{N}$ such that $|a_n|>K$ $\forall n\geq n_k$.
+                        </p>
 
-                    <p>
-                        <b>Why we need this?</b>
-                        You may wonder that wtf? We can simply say:
-                        $$\lim_{n \to \infty}a_n=\infty$$
-                        But then why this kid of gargons?<br>
-                        The answer is tricky but simple concept of analysis that you must understand. <br>
-                        The reason is how you know what is infinity? This is not a number right! Do you know what number
-                        is
-                        infinity? Then how can you invoke it in mathematics? You cann't do any mathematical operations
-                        with
-                        it. Then you can't techmically write some real number $x=\infty$. This is wrong. That's why we
-                        need
-                        to bring the actual meaning of $\infty$ which is so large that we can't bound it by any real
-                        number
-                        say $K$. That's why this is said that $\nexists K \in \mathbb{R}$ such that $\infty \leq K$ or
-                        $\forall K \in \mathbb{R}$, $K>\infty$.
-                    </p>
+                        <p>
+                            <b>Understanding What this means:</b>
+                            This means you have a sequence and you are going for larger and larger terms for example you
+                            have a
+                            sequence $\{a_n\}$ now, let's say you choose $2024 \in \mathbb{R}$ then as the sequence is
+                            getting
+                            larger and larger after a certain time you must find a term $a_N$ such that $a_N>2024.$ <br>
+                            Now, it may be two sided or one sided infinity as we go along the sequence and that is to
+                            say
+                            the
+                            sequence can either go to $\infty$ or $-\infty$ or both simultaneosly. <br>
+                        </p>
+
+                        <p>
+                            <b>Why we need this?</b>
+                            You may wonder that wtf? We can simply say:
+                            $$\lim_{n \to \infty}a_n=\infty$$
+                            But then why this kid of gargons?<br>
+                            The answer is tricky but simple concept of analysis that you must understand. <br>
+                            The reason is how you know what is infinity? This is not a number right! Do you know what
+                            number
+                            is
+                            infinity? Then how can you invoke it in mathematics? You cann't do any mathematical
+                            operations
+                            with
+                            it. Then you can't techmically write some real number $x=\infty$. This is wrong. That's why
+                            we
+                            need
+                            to bring the actual meaning of $\infty$ which is so large that we can't bound it by any real
+                            number
+                            say $K$. That's why this is said that $\nexists K \in \mathbb{R}$ such that $\infty \leq K$
+                            or
+                            $\forall K \in \mathbb{R}$, $K>\infty$.
+                        </p>
+                    </div>
+
+                    <div id="infinitely-small-sequences">
+                        <b>&bullet; Infinitely Small Sequences:</b>
+                        <p>
+                            Definition: A sequence $\{a_n\}$ is called infinitely small if
+                            $$\lim_{n \to \infty}a_n=0$$
+                            that is, $|a_n|<\varepsilon$ $\forall n\geq \eta_\varepsilon$. </p>
+
+                                <p>
+                                    <b>Question:</b>
+                                    Try to think of how to interpret it as before? Can you see some similarity bewteen
+                                    <a href="#infinitely-small-sequences">infinitly small</a> and <a
+                                        href="#infinitely-large-sequences">infinitely large sequences?</a><br>
+                                    Try to think by your own then check
+                                    <b><a href="https://atrajit-sarkar.github.io/Answers#question-1">answer</a></b>.
+                                </p>
+                    </div>
+
+                    <div id="cauchy-sequences">
+                        <b>&bull; Cauchy Sequences:</b>
+
+                        <p>
+                            <b>Definition:</b>
+                            A sequence $\{a_n\}$ is called cauchy iff $\forall \varepsilon>0$, $\exists K \in
+                            \mathbb{N}$
+                            such that $\forall m,n \geq K$ <br>$|a_n-a_m|<\varepsilon$. </p>
+
+                                <p>
+                                    <b>Notice:</b>
+                                    If we fix $m=K$ then $|a_n-a_K|<\varepsilon$ $\forall n\geq K$. </p>
+                    </div>
                 </div>
 
-                <div id="cauchy-sequences">
-                    <b>Cauchy Sequences:</b>
 
-                    <p>
-                        <b>Definition:</b>
-                        A sequence $\{a_n\}$ is called cauchy iff $\forall \varepsilon>0$,  $\exists K \in \mathbb{N}$ such that $\forall m,n \geq K$ <br>$|a_n-a_m|<\varepsilon$.
-                    </p>
 
-                    <p>
-                        <b>Notice:</b>
-                        If we fix $m=K$ then $|a_n-a_K|<\varepsilon$ $\forall n\geq K$.
-                    </p>
-                </div>
             </div>
 
 
 
         </div>
 
-
-
-    </div>
-
     </div>
 
 
 
-    <script src="script.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>
