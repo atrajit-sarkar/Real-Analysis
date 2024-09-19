@@ -152,10 +152,17 @@ body {
     }
 }
 
-.section {
-    font-size: 25px;
+h2{
+    color: red;
 }
 
+h3{
+    color: rgb(2, 122, 242);
+}
+
+b{
+    background-color: yellow;
+}
 .highlight {
     background-color: yellow;
     /* Highlight color */
@@ -186,4 +193,8 @@ body {
         justify-content: center;
         align-items: center;
     }
+}
+
+span{
+    padding-top: 2px;
 }
