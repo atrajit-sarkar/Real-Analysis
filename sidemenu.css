@@ -26,7 +26,7 @@
 
     }
 
-    button {
+    /* button {
         padding: 10px;
         border: none;
         background-color: #e0a8d5;
@@ -37,7 +37,7 @@
 
     button:hover {
         background-color: #45a049;
-    }
+    } */
 }
 
 
@@ -118,4 +118,14 @@
 
 .side-subsubsection {
     padding-left: 14px;
+}
+
+.container-fluid .navbar-brand:hover {
+    animation: zoomIn 1s ease;
+    filter: brightness(1.3);
+}
+
+.button-close:hover {
+    animation: zoomIn 1s ease;
+    color: red;
 }

@@ -1,8 +1,15 @@
 /* General Styles for Desktop */
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Foldit:wght@100..900&family=Kalnia+Glaze:wght@100..700&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
 
 html {
     scroll-behavior: smooth;
+
+}
+
+[id] {
+    scroll-margin-top: 60px;
+    /* The height of your fixed navbar */
 }
 
 body {
@@ -27,6 +34,7 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     animation: fadeInUp 1s ease-out;
     font-size: 25px;
+    margin-top: 69px;
 }
 
 .container a {
@@ -40,10 +48,9 @@ body {
 }
 
 .search-container {
-    position: fixed;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     margin-top: 20px;
     gap: 10px;
     font-size: 20px;
@@ -53,7 +60,7 @@ body {
 }
 
 #cross {
-    font-size: 30px;
+    font-size: 24px;
 }
 
 #cross:hover {
@@ -69,16 +76,17 @@ body {
     /* Centering content vertically */
     width: 30px;
     /* Width of the circle */
-    height: 30px;
+    height: 24px;
     /* Height of the circle */
     border-radius: 50%;
     /* Makes the element circular */
     text-align: center;
     /* Centers text inside */
+    padding-bottom: 5px;
 }
 
 #search-input {
-    width: 174px;
+    width: 248px;
     padding: 10px;
     border: 1px solid #ccc;
     font-size: 16px;
@@ -114,11 +122,7 @@ body {
         border-radius: 5px;
     }
 
-    button {
-        width: 100%;
-        padding: 12px;
-        border-radius: 5px;
-    }
+
 
     .sr-only {
         font-size: 24px;
@@ -142,27 +146,25 @@ body {
         padding: 10px;
     }
 
-    button {
-        font-size: 14px;
-        padding: 10px;
-    }
+
 
     .sr-only {
         font-size: 18px;
     }
 }
 
-h2{
+h2 {
     color: red;
 }
 
-h3{
+h3 {
     color: rgb(2, 122, 242);
 }
 
-b{
+b {
     background-color: yellow;
 }
+
 .highlight {
     background-color: yellow;
     /* Highlight color */
@@ -195,6 +197,135 @@ b{
     }
 }
 
-span{
+span {
     padding-top: 2px;
+}
+
+
+
+
+
+/* Offcanvas Styles */
+.offcanvas {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #343a40;
+    color: white;
+    transition: right 0.4s ease;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.offcanvas.show {
+    right: 0;
+}
+
+.offcanvas-header {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* Dropdown Styles */
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #343a40;
+    border: none;
+    transition: height 0.3s ease;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    color: aliceblue;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #88a0b9;
+    /* margin: 5px;
+    width: 100%;
+    border-radius: 5px; */
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+
+}
+
+.nav-link:hover {
+    background-color: #495057;
+}
+
+.dropdown-toggle::after {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-toggle.collapsed::after {
+    transform: rotate(-90deg);
+}
+
+
+.section-dropdown {
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    box-shadow: 5px 4px 1px 1px #aeafb1;
+}
+
+.subsection-dropdown {
+    border: 2px solid rgb(184, 247, 203);
+    border-radius: 5px;
+    margin: 6px;
+}
+
+
+.container-fluid span {
+    color: aliceblue;
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container-fluid .navbar-brand:hover {
+    background-color: aliceblue;
+    cursor: default;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(138, 200, 255);
+    padding: 5px;
 }

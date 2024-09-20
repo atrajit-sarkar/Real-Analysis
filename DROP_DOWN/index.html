@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown with Nested Dropdown</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dropdown-container" onclick="toggleDropdown('dropdownContent')">
+    <div class="dropdown-header">
+      <span class="dropdown-title">Main Dropdown</span>
+      <span class="dropdown-icon">▼</span>
+    </div>
+    <div class="dropdown-content" id="dropdownContent">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+
+      <!-- Sub Dropdown -->
+      <div class="dropdown-sub-container" onclick="toggleDropdown('subDropdownContent'); event.stopPropagation();">
+        <div class="dropdown-header">
+          <span class="dropdown-title">Sub Dropdown</span>
+          <span class="dropdown-icon">▼</span>
+        </div>
+        <div class="dropdown-content" id="subDropdownContent">
+          <a href="#">Sub Option 1</a>
+          <a href="#">Sub Option 2</a>
+        </div>
+      </div>
+
+      <a href="#">Option 3</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

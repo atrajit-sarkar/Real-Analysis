@@ -45,3 +45,48 @@ function scrollToDiv(inputElement) {
         }
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const offcanvasToggler = document.getElementById('offcanvasToggler');
+    const offcanvas = document.getElementById('offcanvasSidebar');
+    const offcanvasClose = document.getElementById('offcanvasClose');
+
+    // Offcanvas toggle functionality
+    offcanvasToggler.addEventListener('click', function () {
+        offcanvas.classList.toggle('show');
+    });
+
+    offcanvasClose.addEventListener('click', function () {
+        offcanvas.classList.remove('show');
+    });
+
+    // Dropdown functionality
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+            const dropdownMenu = this.nextElementSibling;
+            dropdownMenu.classList.toggle('show');
+            this.classList.toggle('collapsed');
+        });
+    });
+
+    // Close offcanvas when clicking outside of it
+    document.addEventListener('click', function (event) {
+        if (!offcanvas.contains(event.target) && !offcanvasToggler.contains(event.target)) {
+            offcanvas.classList.remove('show');
+        }
+    });
+
+    // Prevent closing dropdowns when clicking inside them
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.addEventListener('click', function (e) {
+            e.stopPropagation(); // Prevent the dropdown from closing
+        });
+    });
+});
+
+
+
+

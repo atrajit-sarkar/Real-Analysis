@@ -7,6 +7,8 @@
     <title>Real Analysis</title>
 
     <!-- Styles  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="sidemenu.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
@@ -28,181 +30,245 @@
             });
         });
     </script>
-    <script src="script.js"></script>
     <!-- <script src="sidemenu.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script> -->
+
+    <script src="script.js"></script>
 </head>
 
 <body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <span class="navbar-brand">Welcome To Real Analysis</span>
+            <button class="navbar-toggler" type="button" id="offcanvasToggler" aria-controls="offcanvasSidebar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
 
-    <div class="search-container" role="search">
-        <input type="text" id="search-input" placeholder="Search..." onkeyup="scrollToDiv(this)"
-            aria-label="Search for content">
-    </div>
-    </div>
-
-    <div class="body-container">
-        <div class="sidemenu">
-            <div id="topic-button">Topics</div>
-            <div class="topic-content">
-                <ul class="side-section">
-                    <div class="list">
-
-                        <a href="#introduction-to-limits">Introduction To Limits</a>
-                        <span class="span" id="sequence"><img src="dropdown.svg" alt="" srcset=""></span>
-                    </div>
-                    <ol class="side-subsection" type="1">
-                        <li id="seq-list">
-                            <div class="list">
-                                <a href="#sequences">Sequences</a>
-                                <span class="span" id="sequence"><img src="dropdown.svg" alt="" srcset=""></span>
-                            </div>
-                            <ul class="side-subsubsection">
-                                <li><a href="#infinitely-large-sequences">Infinitely Large Sequence</a></li>
-                                <li><a href="#infinitely-small-sequences">Infinitely Small Sequences</a></li>
-                                <li><a href="#cauchy-sequences">Cauchy Sequence</a></li>
+    <div class="offcanvas" id="offcanvasSidebar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Topics</h5>
+            <button type="button" class="button-close" id="offcanvasClose" aria-label="Close">&times;</button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- <div class="search-container" role="search">
+                <input type="text" id="search-input" placeholder="Search..." onkeyup="scrollToDiv(this)"
+                    aria-label="Search for content">
+            </div> -->
+            <ul class="navbar-nav">
+                <!-- <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li> -->
+                <li class="nav-item dropdown section-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#introduction-to-limits" role="button" id="mainDropdown">Introduction To
+                        Limits</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item dropdown subsection-dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#sequences" id="nestedDropdown">Sequences</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#infinitely-large-sequences">Infinitely Large Sequence</a></li>
+                                <li><a class="dropdown-item" href="#infinitely-small-sequences">Infinitely Small Sequences</a></li>
+                                <li><a class="dropdown-item" href="#cauchy-sequences">Cauchy Sequences</a></li>
                             </ul>
                         </li>
-                    </ol>
-                </ul>
-            </div>
+                        <li class="nav-item dropdown subsection-dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#sequences" id="nestedDropdown">Sequences</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#infinitely-large-sequences">Infinitely Large Sequence</a></li>
+                                <li><a class="dropdown-item" href="#infinitely-small-sequences">Infinitely Small Sequences</a></li>
+                                <li><a class="dropdown-item" href="#cauchy-sequences">Cauchy Sequences</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown subsection-dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#sequences" id="nestedDropdown">Sequences</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#infinitely-large-sequences">Infinitely Large Sequence</a></li>
+                                <li><a class="dropdown-item" href="#infinitely-small-sequences">Infinitely Small Sequences</a></li>
+                                <li><a class="dropdown-item" href="#cauchy-sequences">Cauchy Sequences</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li class="nav-item dropdown section-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#introduction-to-limits" role="button" id="mainDropdown">Introduction To
+                        Limits</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item dropdown subsection-dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#sequences" id="nestedDropdown">Sequences</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#infinitely-large-sequences">Infinitely Large Sequence</a></li>
+                                <li><a class="dropdown-item" href="#infinitely-small-sequences">Infinitely Small Sequences</a></li>
+                                <li><a class="dropdown-item" href="#cauchy-sequences">Cauchy Sequences</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown subsection-dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#sequences" id="nestedDropdown">Sequences</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#infinitely-large-sequences">Infinitely Large Sequence</a></li>
+                                <li><a class="dropdown-item" href="#infinitely-small-sequences">Infinitely Small Sequences</a></li>
+                                <li><a class="dropdown-item" href="#cauchy-sequences">Cauchy Sequences</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown subsection-dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#sequences" id="nestedDropdown">Sequences</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#infinitely-large-sequences">Infinitely Large Sequence</a></li>
+                                <li><a class="dropdown-item" href="#infinitely-small-sequences">Infinitely Small Sequences</a></li>
+                                <li><a class="dropdown-item" href="#cauchy-sequences">Cauchy Sequences</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </li>
+            </ul>
         </div>
+    </div>
 
-        <div class="container">
-            <div id="introduction-to-limits">
-                <h2>Introduction to Limits</h2>
-                <div id="sequences">
-                    <h3>Sequences:</h3>
+
+    <div class="container">
+        <div id="introduction-to-limits">
+            <h2>Introduction to Limits</h2>
+            <div id="sequences">
+                <h3>Sequences:</h3>
+                <p>
+
+                    <a
+                        href="https://drive.google.com/drive/folders/11iksh6qbTwNZI8n-KdBySod2HXEGcWjh?usp=drive_link">ClassNotes</a>
+                </p>
+                <div id="infinitely-large-sequences">
+                    <b>&bullet; Infinitely Large Sequence:</b>
+
                     <p>
-
-                        <a
-                            href="https://drive.google.com/drive/folders/11iksh6qbTwNZI8n-KdBySod2HXEGcWjh?usp=drive_link">ClassNotes</a>
+                        A sequence $\{a_n\}$ is called infinitely large if $ \forall K \in \mathbb{R}$ $\exists
+                        n_{k}
+                        \in
+                        \mathbb{N}$ such that $|a_n|>K$ $\forall n\geq n_k$.
                     </p>
-                    <div id="infinitely-large-sequences">
-                        <b>&bullet; Infinitely Large Sequence:</b>
 
-                        <p>
-                            A sequence $\{a_n\}$ is called infinitely large if $ \forall K \in \mathbb{R}$ $\exists
-                            n_{k}
-                            \in
-                            \mathbb{N}$ such that $|a_n|>K$ $\forall n\geq n_k$.
-                        </p>
+                    <p>
+                        <b>Understanding What this means:</b>
+                        This means you have a sequence and you are going for larger and larger terms for example you
+                        have a
+                        sequence $\{a_n\}$ now, let's say you choose $2024 \in \mathbb{R}$ then as the sequence is
+                        getting
+                        larger and larger after a certain time you must find a term $a_N$ such that $a_N>2024.$ <br>
+                        Now, it may be two sided or one sided infinity as we go along the sequence and that is to
+                        say
+                        the
+                        sequence can either go to $\infty$ or $-\infty$ or both simultaneosly. <br>
+                    </p>
 
-                        <p>
-                            <b>Understanding What this means:</b>
-                            This means you have a sequence and you are going for larger and larger terms for example you
-                            have a
-                            sequence $\{a_n\}$ now, let's say you choose $2024 \in \mathbb{R}$ then as the sequence is
-                            getting
-                            larger and larger after a certain time you must find a term $a_N$ such that $a_N>2024.$ <br>
-                            Now, it may be two sided or one sided infinity as we go along the sequence and that is to
-                            say
-                            the
-                            sequence can either go to $\infty$ or $-\infty$ or both simultaneosly. <br>
-                        </p>
+                    <p>
+                        <b>Why we need this?</b>
+                        You may wonder that wtf? We can simply say:
+                        $$\lim_{n \to \infty}a_n=\infty$$
+                        But then why this kid of gargons?<br>
+                        The answer is tricky but simple concept of analysis that you must understand. <br>
+                        The reason is how you know what is infinity? This is not a number right! Do you know what
+                        number
+                        is
+                        infinity? Then how can you invoke it in mathematics? You cann't do any mathematical
+                        operations
+                        with
+                        it. Then you can't techmically write some real number $x=\infty$. This is wrong. That's why
+                        we
+                        need
+                        to bring the actual meaning of $\infty$ which is so large that we can't bound it by any real
+                        number
+                        say $K$. That's why this is said that $\nexists K \in \mathbb{R}$ such that $\infty \leq K$
+                        or
+                        $\forall K \in \mathbb{R}$, $K>\infty$.
+                    </p>
 
-                        <p>
-                            <b>Why we need this?</b>
-                            You may wonder that wtf? We can simply say:
-                            $$\lim_{n \to \infty}a_n=\infty$$
-                            But then why this kid of gargons?<br>
-                            The answer is tricky but simple concept of analysis that you must understand. <br>
-                            The reason is how you know what is infinity? This is not a number right! Do you know what
-                            number
-                            is
-                            infinity? Then how can you invoke it in mathematics? You cann't do any mathematical
-                            operations
-                            with
-                            it. Then you can't techmically write some real number $x=\infty$. This is wrong. That's why
-                            we
-                            need
-                            to bring the actual meaning of $\infty$ which is so large that we can't bound it by any real
-                            number
-                            say $K$. That's why this is said that $\nexists K \in \mathbb{R}$ such that $\infty \leq K$
-                            or
-                            $\forall K \in \mathbb{R}$, $K>\infty$.
-                        </p>
+                    <p>
+                        <b>Velocity:</b>
+                        Lets define the velocity of a sequence by
+                        $$v=\frac{K}{n_K}$$
+                        <b>Example1:</b>
+                        Now, for the following sequence $\{a_n\}=\{1,2,3,4,5, \dots\}$ we have for any $K \in
+                        \mathbb{R}$, $n_K= \lfloor K \rfloor+1$. ( <a href="">Verify</a> ). <br>
+                        Now, $v=\frac{K}{\lfloor K \rfloor+1}$.
+                    </p>
 
-                        <p>
-                            <b>Velocity:</b>
-                            Lets define the velocity of a sequence by
-                            $$v=\frac{K}{n_K}$$
-                            <b>Example1:</b>
-                            Now, for the following sequence $\{a_n\}=\{1,2,3,4,5, \dots\}$ we have for any $K \in
-                            \mathbb{R}$, $n_K= \lfloor K \rfloor+1$. ( <a href="">Verify</a> ). <br>
-                            Now, $v=\frac{K}{\lfloor K \rfloor+1}$.
-                        </p>
+                    <p>
+                        <b> Example2: </b>
+                        Consider the sequence:
+                        $$
+                        a_1=1 \\
+                        a_2=1+ \frac{1}{2} \\
+                        a_3=1+ \frac{1}{2}+\frac{1}{3} \\
+                        a_4=1+ \frac{1}{2} +\frac{1}{3} + \frac{1}{4}\\
+                        \vdots \\
+                        a_n=1+ \frac{1}{2} +\frac{1}{3} + \frac{1}{4}+ \dots +\frac{1}{n}\\
+                        $$
+                    </p>
 
-                        <p>
-                            <b> Example2: </b>
-                            Consider the sequence:
-                            $$
-                            a_1=1 \\
-                            a_2=1+ \frac{1}{2} \\
-                            a_3=1+ \frac{1}{2}+\frac{1}{3} \\
-                            a_4=1+ \frac{1}{2} +\frac{1}{3} + \frac{1}{4}\\
-                            \vdots \\
-                            a_n=1+ \frac{1}{2} +\frac{1}{3} + \frac{1}{4}+ \dots +\frac{1}{n}\\
-                            $$
-                        </p>
+                    <p>
+                        <b>Velocity Calculation:</b>
+                        Observe that,
+                        $$a_n=1+ \frac{1}{2} +\frac{1}{3} + \frac{1}{4}+ \dots +\frac{1}{n} =1+ (\frac{1}{2})
+                        +(\frac{1}{3} + \frac{1}{4})+ \dots +\frac{1}{n}\\ >1+
+                        \frac{1}{2}+(\frac{1}{4}+\frac{1}{4})+\dots + \frac{1}{n}\\
+                        =1+\frac{1}{2}+\frac{1}{2}+\dots+\frac{1}{n}$$
+                        So, for $K \in \mathbb{R}$ we need $n_K\geq2^{K}$. <br>
+                        Then $v\leq \frac{K}{2^K}$
+                    </p>
 
-                        <p>
-                            <b>Velocity Calculation:</b>
-                            Observe that,
-                            $$a_n=1+ \frac{1}{2} +\frac{1}{3} + \frac{1}{4}+ \dots +\frac{1}{n} =1+ (\frac{1}{2})
-                            +(\frac{1}{3} + \frac{1}{4})+ \dots +\frac{1}{n}\\ >1+
-                            \frac{1}{2}+(\frac{1}{4}+\frac{1}{4})+\dots + \frac{1}{n}\\
-                            =1+\frac{1}{2}+\frac{1}{2}+\dots+\frac{1}{n}$$
-                            So, for $K \in \mathbb{R}$ we need $n_K\geq2^{K}$. <br>
-                            Then $v\leq \frac{K}{2^K}$
-                        </p>
+                    <p>Now, compare $v_1=\frac{K}{\lfloor K \rfloor+1}$ and $v_2\leq \frac{K}{2^K}$ <br>
 
-                        <p>Now, compare $v_1=\frac{K}{\lfloor K \rfloor+1}$ and $v_2\leq \frac{K}{2^K}$ <br>
+                        Cleraly, $v_1>>v_2$. <br>
 
-                            Cleraly, $v_1>>v_2$. <br>
-
-                            <b>Moral:</b>
-                            $v_2 << v_1$ but it is steady, so gradually it blows to $\infty$. </p>
-                    </div>
-
-                    <div id="infinitely-small-sequences">
-                        <b>&bullet; Infinitely Small Sequences:</b>
-                        <p>
-                            Definition: A sequence $\{a_n\}$ is called infinitely small if
-                            $$\lim_{n \to \infty}a_n=0$$
-                            that is, $|a_n|<\varepsilon$ $\forall n\geq \eta_\varepsilon$. </p>
-
-                                <p>
-                                    <b>Question:</b>
-                                    Try to think of how to interpret it as before? Can you see some similarity bewteen
-                                    <a href="#infinitely-small-sequences">infinitly small</a> and <a
-                                        href="#infinitely-large-sequences">infinitely large sequences?</a><br>
-                                    Try to think by your own then check
-                                    <b><a href="https://atrajit-sarkar.github.io/Answers#question-1">answer</a></b>.
-                                </p>
-                    </div>
-
-                    <div id="cauchy-sequences">
-                        <b>&bull; Cauchy Sequences:</b>
-
-                        <p>
-                            <b>Definition:</b>
-                            A sequence $\{a_n\}$ is called cauchy iff $\forall \varepsilon>0$, $\exists K \in
-                            \mathbb{N}$
-                            such that $\forall m,n \geq K$ <br>$|a_n-a_m|<\varepsilon$. </p>
-
-                                <p>
-                                    <b>Notice:</b>
-                                    If we fix $m=K$ then $|a_n-a_K|<\varepsilon$ $\forall n\geq K$. </p>
-                    </div>
+                        <b>Moral:</b>
+                        $v_2 << v_1$ but it is steady, so gradually it blows to $\infty$. </p>
                 </div>
 
+                <div id="infinitely-small-sequences">
+                    <b>&bullet; Infinitely Small Sequences:</b>
+                    <p>
+                        Definition: A sequence $\{a_n\}$ is called infinitely small if
+                        $$\lim_{n \to \infty}a_n=0$$
+                        that is, $|a_n|<\varepsilon$ $\forall n\geq \eta_\varepsilon$. </p>
 
+                            <p>
+                                <b>Question:</b>
+                                Try to think of how to interpret it as before? Can you see some similarity bewteen
+                                <a href="#infinitely-small-sequences">infinitly small</a> and <a
+                                    href="#infinitely-large-sequences">infinitely large sequences?</a><br>
+                                Try to think by your own then check
+                                <b><a href="https://atrajit-sarkar.github.io/Answers#question-1">answer</a></b>.
+                            </p>
+                </div>
 
+                <div id="cauchy-sequences">
+                    <b>&bull; Cauchy Sequences:</b>
+
+                    <p>
+                        <b>Definition:</b>
+                        A sequence $\{a_n\}$ is called cauchy iff $\forall \varepsilon>0$, $\exists K \in
+                        \mathbb{N}$
+                        such that $\forall m,n \geq K$ <br>$|a_n-a_m|<\varepsilon$. </p>
+
+                            <p>
+                                <b>Notice:</b>
+                                If we fix $m=K$ then $|a_n-a_K|<\varepsilon$ $\forall n\geq K$. </p>
+                </div>
             </div>
 
 
 
         </div>
+
+
+
+    </div>
 
     </div>
 
